@@ -1,0 +1,157 @@
+* {
+ padding: 0;
+ margin: 0;
+ font-family: "Montserrat", sans-serif;
+ background-color: #1F2022;
+}
+a {
+ text-decoration: none;
+ text-decoration-line: none;
+ /* color: white; */
+}
+
+.nav {
+ background-color: #1F2022;
+ /* width: 100%; */
+ padding: 0 2rem 0 2rem;
+ height: 3rem;
+}
+
+.navbar {
+ font-weight: 600;
+ height: 100%;
+ color: white;
+ width: 100%;
+ font-size: 0.8rem;
+ display: flex;
+ margin: 0 auto;
+ /* justify-content: space-between; */
+}
+
+.navbar-container {
+ height: 100%;
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.navbar-container a {
+ color: white;
+}
+
+.nav-middle {
+ width: 30%;
+ display: flex;
+ justify-content: space-between;
+}
+
+.nav-left p {
+ font-family: "Cedarville Cursive", cursive;
+ font-weight: 600;
+ font-style: normal;
+ font-size: 1rem;
+}
+
+.blue a {
+ color: #00ADB5;
+}
+
+.nav-end button {
+ background-color: aliceblue;
+ color: black;
+ border: none;
+ padding: 0.4rem;
+ border-radius: 0.3rem;
+ font-weight: 600;
+}
+
+.nav-end a:hover button {
+ cursor: pointer;
+}
+
+
+.main-content {
+ border: 1px solid black;
+ margin: 2rem 1rem 4rem 1rem;
+ height: 600px;
+}
+
+.main-content-container {
+ /* border: 1px solid white; */
+ /* height: 600px; */
+ height: 100%;
+ width: 100%;
+ max-width: 100%;
+ margin: 0 auto;
+ display: flex;
+ justify-content: space-between;
+ /* padding: 0 4rem 0 4rem; */
+}
+
+.main-content-container-left {
+ width: 45%;
+ height: 100%;
+}
+.main-content-container-left img {
+ width: 120%;
+ height: 100%;
+ overflow: visible;
+ background-blend-mode: multiply;
+ 
+}
+/* .glass-photo{
+ height: 150%;
+} */
+.main-content-container-left a {
+ width: 50%;
+ height: 100%;
+
+}
+
+.main-content-container-left h2 {
+ color: #00ADB5;
+ font-weight: 500;
+ position: absolute;
+ background: transparent;
+ bottom: 10rem;
+}
+
+.main-content-container-left p {
+ position: absolute;
+ display: inline-block;
+ color: white;
+ font-weight: 400;
+ background: transparent;
+ bottom: 10rem;
+}
+
+.main-content-container-right {
+ align-self: center;
+ width: 45%;
+ height: 100%;
+ background: transparent;
+}
+
+.main-content-container-right h1 {
+ color: #00ADB5;
+ font-weight: 600;
+ font-size: 2.5rem;
+ word-spacing: 5px;
+ letter-spacing: 3px;
+ margin: 0 0 1rem 0;
+}
+
+.greeting {
+ font-size: 0.8rem;
+ color: white;
+ font-weight: 500;
+ line-height: 1.6;
+}
+
+.desc {
+ font-size: 0.6rem;
+ color: #696969;
+ font-weight: 400;
+ margin: 0 0 1rem 0;
+}
