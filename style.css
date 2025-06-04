@@ -265,7 +265,7 @@ body {
  margin-bottom: 20px;
 }
 
-.about-section {
+.About-section {
  display: none;
 }
 
@@ -426,10 +426,10 @@ body {
 
 
 /* Resume */
-.resume-section{
+.Resume-section{
  display: none;
 }
-.resume-section .article-title {
+.Resume-section .article-title {
  margin-bottom: 20px;
 }
 
@@ -623,7 +623,6 @@ body {
  color: hsl(0, 0%, 98%);
  margin-left: 5px;
  margin-bottom: 3px;
-
 }
 .project-type{
  font-size: 0.8rem;
@@ -631,3 +630,4 @@ body {
  opacity: 0.8;
  margin-left: 5px;
 }
+
