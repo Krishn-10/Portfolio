@@ -658,6 +658,10 @@ body {
 
 
 /* Photography */
+.Photography-section {
+ display: none;
+}
+
 .Photography-title {
  color: white;
  margin-bottom: 20px;
@@ -786,21 +790,137 @@ body {
  color: hsl(45, 100%, 58%);
 }
 
-.photography-social{
+.photography-social {
 
  text-align: center;
 }
-.photography-social a{
+
+.photography-social a {
  color: white;
 }
-.photography-social a i{
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 0.8;
-  transition: transform 0.1s ease;
+
+.photography-social a i {
+ background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+ background-clip: text;
+ -webkit-text-fill-color: transparent;
+ opacity: 0.8;
+ transition: transform 0.1s ease;
 }
-.photography-social a i:hover{
-  opacity: 1;
-  transform: scale(1.1);
+
+.photography-social a i:hover {
+ opacity: 1;
+ transform: scale(1.1);
 }
+
+
+/* Contact */
+.Contact-section {
+ width: 100%;
+}
+
+.contact-title {
+ color: white;
+}
+
+.contact-break {
+ height: 0.3rem;
+ width: 40px;
+ background-color: hsl(45, 100%, 58%);
+ border-radius: 10px;
+ border: none;
+ margin-bottom: 50px;
+}
+
+.contact-map {
+ margin-bottom: 30px;
+ text-align: center;
+ width: 100%;
+ height: 400px;
+ /* Adjust as needed */
+ -webkit-filter: grayscale(100%);
+ /* For older versions of Chrome and Safari */
+ filter: grayscale(100%);
+ /* For modern browsers */
+ width: 100%;
+ border: 1px solid (0, 0%, 22%);
+ /* overflow: hidden; */
+}
+
+.contact-map iframe {
+ opacity: 1;
+ transition: opacity 0.2s ease;
+ width: 100%;
+ height: 100%;
+ border-radius: 10px;
+}
+
+.contact-form {}
+
+.contact-form-title {
+ color: white;
+ margin-bottom: 15px;
+
+}
+
+.contact-form form {
+ /* color: white; */
+ /* margin-bottom: 15px; */
+}
+
+.contact-form form .inputs {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 30px;
+ margin-bottom: 30px;
+ box-sizing: border-box;
+}
+
+.contact-name,
+.contact-email {
+ color: hsl(0, 0%, 84%);
+ border-radius: 10px;
+ outline: none;
+ width: 100%;
+ background: none;
+ height: 3rem;
+ padding: 8px 14px;
+ box-sizing: border-box;
+ border: 1px solid grey;
+ /* height: 100%; */
+ font-size: 1.1rem;
+
+}
+
+#text-message {
+ color: white;
+ border: 1px solid grey;
+ border-radius: 10px;
+ background: none;
+ width: 100%;
+ box-sizing: border-box;
+ min-height: 100px;
+ height: 120px;
+ max-height: 200px;
+ resize: vertical;
+ padding: 20px 20px;
+ font-size: 1.1rem;
+ margin-bottom: 10px;
+}
+
+.contact-button{
+ display: flex;
+ margin-left: auto;
+ background: none;
+ outline: none;
+ padding: 15px 20px;
+ /* border: none; */
+ border: 1px solid grey;
+ border-radius: 8px;
+ justify-content: center;
+ gap: 20px;
+ cursor: not-allowed;
+}
+.contact-button p,i{
+ color: hsl(45, 100%, 65%);
+}
+
