@@ -55,11 +55,13 @@ body {
  margin: 0 auto;
  display: flex;
  justify-content: space-between;
+ gap: 30px;
 }
 
 .sidebar {
- max-height: max-content;
+ /* max-height: 100vh; */
  position: sticky;
+ top: 0;
  padding: 3.8rem 1rem 0 1rem;
  background-color: rgb(22, 22, 22);
  border: 0.1px solid hsl(0, 0%, 22%);
@@ -69,8 +71,10 @@ body {
  /* border: 1px solid red; */
  display: flex;
  flex-direction: column;
+ align-self: flex-start;
  /* text-align: center; */
  /* justify-content: center; */
+ z-index: 100;
 }
 
 .avatar {
@@ -216,6 +220,9 @@ body {
  border-radius: 20px;
  z-index: 1;
  padding: 30px;
+ overflow-x: hidden;
+ /* Add this to prevent horizontal overflow */
+ word-wrap: break-word;
 }
 
 .navbar {
@@ -310,7 +317,10 @@ body {
  border-radius: 15px;
  box-shadow: 1px 1px 2px rgb(9, 9, 9);
 }
-
+.fa-code{
+ font-size: 2rem;
+ color: hsl(45, 100%, 58%);
+}
 .service-content-box {
  display: flex;
  flex-direction: column;
@@ -619,6 +629,12 @@ body {
 .projects-list-item {
  align-self: baseline;
 }
+.upcoming-projects{
+ opacity: 0.4;
+}
+.upcoming-projects:hover a{
+ cursor: not-allowed;
+}
 
 .project-image {
  position: relative;
@@ -635,6 +651,7 @@ body {
  height: 100%;
  width: 100%;
  transition-duration: 0.2s;
+ 
 }
 
 .project-image img:hover {
@@ -654,7 +671,9 @@ body {
  opacity: 0.8;
  margin-left: 5px;
 }
-
+.fa-github{
+ position: absolute;
+}
 
 
 /* Photography */
@@ -907,7 +926,7 @@ body {
  margin-bottom: 10px;
 }
 
-.contact-button{
+.contact-button {
  display: flex;
  margin-left: auto;
  background: none;
@@ -920,7 +939,84 @@ body {
  gap: 20px;
  cursor: not-allowed;
 }
-.contact-button p,i{
+
+.contact-button p,
+i {
  color: hsl(45, 100%, 65%);
 }
 
+
+
+
+/* Media Queries */
+@media screen and (max-width: 900px) {
+ .main-content {
+  flex-direction: column;
+  padding-top: 80px;
+  /* Space for navbar */
+ }
+
+ .navbar {
+  width: calc(100% - 40px);
+  left: 20px;
+  top: 20px;
+  position: absolute;
+ }
+
+ article {
+  width: 100%;
+  overflow-x: hidden;
+  word-wrap: break-word;
+ }
+
+ .sidebar {
+  max-height: none;
+  overflow: visible;
+ }
+}
+
+@media screen and (max-width: 700px) {
+ .main-content {
+  padding: 70px 15px 20px;
+ }
+
+ .navbar {
+  padding: 1rem 0;
+  width: calc(100% - 30px);
+ }
+
+ /* Prevent text overflow */
+ p,
+ h1,
+ h2,
+ h3,
+ h4 {
+  max-width: 100%;
+  overflow-wrap: break-word;
+ }
+
+ /* Ensure images don't overflow */
+ img {
+  max-width: 100%;
+  height: auto;
+ }
+}
+
+@media screen and (max-width: 500px) {
+ .main-content {
+  padding: 60px 10px 15px;
+ }
+
+ .navbar {
+  padding: 0.8rem 0;
+  width: calc(100% - 20px);
+ }
+
+ /* Adjust text sizes for better readability */
+ .service-item-text,
+ .testimonial-item-text,
+ .about-text p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+ }
+}
