@@ -317,10 +317,12 @@ body {
  border-radius: 15px;
  box-shadow: 1px 1px 2px rgb(9, 9, 9);
 }
-.fa-code{
+
+.fa-code {
  font-size: 2rem;
  color: hsl(45, 100%, 58%);
 }
+
 .service-content-box {
  display: flex;
  flex-direction: column;
@@ -571,11 +573,22 @@ body {
  transition-timing-function: ease-in-out;
 }
 
-.skills-item-progressbar:hover .progress {
+.webdesign-progress:hover .progress {
+ width: 60%;
+ cursor: pointer;
+}
+.webdev-progress:hover .progress {
+ width: 70%;
+ cursor: pointer;
+}
+.dsa-progress:hover .progress {
  width: 80%;
  cursor: pointer;
 }
-
+.cloud-progress:hover .progress {
+ width: 50%;
+ cursor: pointer;
+}
 .skills-item-progressbar:hover {
  cursor: pointer;
 }
@@ -629,21 +642,53 @@ body {
 .projects-list-item {
  align-self: baseline;
 }
-.upcoming-projects{
- opacity: 0.4;
-}
-.upcoming-projects:hover a{
- cursor: not-allowed;
-}
 
 .project-image {
- position: relative;
  box-sizing: border-box;
  width: 100%;
  overflow: hidden;
  height: auto;
  margin-bottom: 10px;
  border-radius: 16px;
+ position: relative;
+
+}
+
+.project-github-icon a i {
+ font-size: 2rem;
+ visibility: hidden;
+ position: absolute;
+ padding: 10px 14px;
+ border-radius: 5px;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ transition: visibility 0.2s ease;
+ z-index: 10;
+}
+
+.project-image:hover .project-github-icon a i {
+ visibility: visible;
+ /* transform-origin: center; */
+ z-index: 10;
+}
+
+.project-list-item a:hover .project-github-icon a i {
+    visibility: visible;
+}
+
+/* .project-image:hover .project-image {
+ opacity: 0.6;
+} */
+
+.project-list-item:hover .project-image img {
+    transform: scale(1.1);
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.project-image a .fa-github {
+ color: hsl(45, 100%, 58%);
 }
 
 .project-image img {
@@ -651,12 +696,21 @@ body {
  height: 100%;
  width: 100%;
  transition-duration: 0.2s;
- 
 }
 
-.project-image img:hover {
- transform: scale(1.1);
+#workinprogress{
+    opacity: 0.7;
+    cursor: not-allowed !important;
 }
+
+
+/* .projects-container .projects-list .upcoming-projects:hover {
+    opacity: 0.7;
+} */
+
+/* .project-image img:hover {
+ transform: scale(1.1);
+} */
 
 .project-name {
  font-size: 0.9rem;
@@ -671,7 +725,8 @@ body {
  opacity: 0.8;
  margin-left: 5px;
 }
-.fa-github{
+
+.fa-github {
  position: absolute;
 }
 
