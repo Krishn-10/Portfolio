@@ -56,6 +56,7 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 30px;
+    /* opacity: 0.3; */
 }
 
 .sidebar {
@@ -200,7 +201,6 @@ body {
 
 .sidebar-social-icons-item a {
     color: rgb(253, 253, 238);
-
 }
 
 .sidebar-social-icons-item a i {
@@ -259,7 +259,6 @@ body {
     opacity: 0.7;
 }
 
-
 .main-content h1 {
     font-size: 2rem;
     color: white;
@@ -294,7 +293,6 @@ body {
     color: white;
 }
 
-
 .service h2 {
     margin-bottom: 20px;
 }
@@ -311,7 +309,10 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    background: linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
+    background: linear-gradient(to bottom right,
+            hsla(240, 1%, 18%, 0.251) 0%,
+            hsla(240, 2%, 11%, 0) 100%),
+        hsl(240, 2%, 13%);
     padding: 30px;
     gap: 20px;
     border-radius: 15px;
@@ -344,6 +345,82 @@ body {
     margin-top: 3px;
 }
 
+.testimonial-hidden-close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    background-color: hsl(0, 0%, 17%);
+    padding: 3px 5px;
+    border-radius: 5px;
+}
+
+.testimonial-hidden-close:hover {
+    cursor: pointer;
+}
+
+.testimonial-hidden {
+    display: none;
+}
+
+.testimonial-hidden.show {
+    position: fixed;
+    /* display: none; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    background: linear-gradient(to bottom right,
+            hsla(240, 1%, 18%, 0.251) 0%,
+            hsla(240, 2%, 11%, 0) 100%),
+        hsl(240, 2%, 13%);
+    padding: 32px;
+    display: flex;
+    gap: 30px;
+    border-radius: 20px;
+    color: white;
+    border: 1px solid hsl(0, 0%, 22%);
+}
+
+.testimonial-hidden-left {
+    text-align: center;
+
+}
+
+.testimonial-hidden-right h1 {
+    margin-bottom: 6px;
+
+}
+
+.testimonial-hidden-right time {
+    display: block;
+    margin-bottom: 16px;
+    opacity: 0.7;
+
+}
+
+.testimonial-hidden-text p {
+    opacity: 0.7;
+    line-height: 1.6;
+    font-weight: 100;
+}
+
+.hidden-card-image {
+    background: linear-gradient(to bottom right,
+            hsl(240, 1%, 25%) 3%,
+            hsl(0, 0%, 19%) 97%);
+    border-radius: 20px;
+    margin-bottom: 40px;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+}
+
+.hidden-card-image img {
+    box-sizing: border-box;
+    height: 80px;
+    width: 80px;
+}
+
 .testimonial-list {
     display: flex;
     align-items: flex-start;
@@ -360,11 +437,13 @@ body {
     /* background-color: hsl(240, 2%, 13%); */
     min-width: calc(50% - 15px);
     position: relative;
-    background: linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
+    background: linear-gradient(to bottom right,
+            hsla(240, 1%, 18%, 0.251) 0%,
+            hsla(240, 2%, 11%, 0) 100%),
+        hsl(240, 2%, 13%);
     border-radius: 20px;
     box-sizing: border-box;
     /* overflow: hidden; */
-
 }
 
 .testimonial-item:hover {
@@ -379,11 +458,12 @@ body {
 
 .card-content {
     padding: 25px 30px 30px 30px;
-
 }
 
 .card-image {
-    background: linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%);
+    background: linear-gradient(to bottom right,
+            hsl(240, 1%, 25%) 3%,
+            hsl(0, 0%, 19%) 97%);
     width: 80px;
     height: 80px;
     box-sizing: border-box;
@@ -438,7 +518,6 @@ body {
     background: hsl(45, 100%, 65%);
 }
 
-
 /* Resume */
 .Resume-section {
     display: none;
@@ -447,8 +526,6 @@ body {
 .Resume-section .article-title {
     margin-bottom: 20px;
 }
-
-
 
 .timeline {
     margin-bottom: 40px;
@@ -492,7 +569,6 @@ body {
     font-size: 1.5rem;
 }
 
-
 .education-list-item h4,
 .education-list-item span,
 .education-list-item p {
@@ -526,11 +602,13 @@ body {
 
 .skills {
     border-radius: 20px;
-    background: linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
+    background: linear-gradient(to bottom right,
+            hsla(240, 1%, 18%, 0.251) 0%,
+            hsla(240, 2%, 11%, 0) 100%),
+        hsl(240, 2%, 13%);
     padding: 1.5rem;
     box-shadow: 2px 2px 15px rgb(14, 14, 14);
     padding-bottom: 1rem;
-
 }
 
 .skills-item {
@@ -543,7 +621,6 @@ body {
     align-items: center;
     margin-bottom: 10px;
 }
-
 
 .skills-item-titlewrapper h4 {
     color: white;
@@ -597,8 +674,6 @@ body {
     cursor: pointer;
 }
 
-
-
 /* Project Section */
 .Projects-section {
     display: none;
@@ -645,6 +720,11 @@ body {
 
 .projects-list-item {
     align-self: baseline;
+    transition-duration: 0.8s;
+}
+
+.project-list-item.none {
+    display: none;
 }
 
 .project-image {
@@ -655,7 +735,6 @@ body {
     margin-bottom: 10px;
     border-radius: 16px;
     position: relative;
-
 }
 
 .project-github-icon a i {
@@ -702,7 +781,6 @@ body {
     transition-duration: 0.2s;
 }
 
-
 /* .projects-container .projects-list .upcoming-projects:hover {
     opacity: 0.7;
 } */
@@ -729,7 +807,6 @@ body {
     position: absolute;
 }
 
-
 /* Photography */
 .Photography-section {
     display: none;
@@ -738,7 +815,6 @@ body {
 .Photography-title {
     color: white;
     margin-bottom: 20px;
-
 }
 
 .photography-break {
@@ -755,12 +831,12 @@ body {
     margin: 0 auto;
     text-align: center;
     font-style: italic;
-    color: #F5F5F5;
+    color: #f5f5f5;
     margin-bottom: 40px;
 }
 
 .quote a {
-    color: #F5F5F5;
+    color: #f5f5f5;
 }
 
 .photography-break2 {
@@ -799,7 +875,7 @@ body {
 
 .photos-container {
     margin-bottom: 20px;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     display: grid;
     /* background-color: hsl(240, 2%, 13%); */
     /* border: 1px solid white; */
@@ -816,12 +892,13 @@ body {
 
 .photos {
     position: relative;
-    box-sizing: border-box;
+    aspect-ratio: auto;
+    /* box-sizing: border-box; */
     width: 100%;
     /* height: 100%; */
     overflow: hidden;
-    height: auto;
-    margin-bottom: 10px;
+    /* height: auto;
+    margin-bottom: 10px; */
     /* border-radius: 16px; */
     /* align-self: center; */
     /* image-resolution:inherit ; */
@@ -830,15 +907,16 @@ body {
 .photos img {
     height: auto;
     width: 100%;
+    object-fit: cover;
+    display: block;
     transition-duration: 0.2s;
-
 }
 
 .photos img:hover {
     cursor: pointer;
     opacity: 0.5;
     transform: scale(1.1);
-
+    /* transition-duration: var(#e6683c); */
 }
 
 .eye {
@@ -856,7 +934,9 @@ body {
 
 .photos:hover .eye {
     visibility: visible;
+    /* z-index: 100; */
     /* transform-origin: center; */
+    /* tranform-right : auto center*/
 }
 
 .fa-eye {
@@ -864,7 +944,6 @@ body {
 }
 
 .photography-social {
-
     text-align: center;
 }
 
@@ -873,7 +952,12 @@ body {
 }
 
 .photography-social a i {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg,
+            #f09433 0%,
+            #e6683c 25%,
+            #dc2743 50%,
+            #cc2366 75%,
+            #bc1888 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 0.8;
@@ -884,7 +968,6 @@ body {
     opacity: 1;
     transform: scale(1.1);
 }
-
 
 /* Contact */
 .Contact-section {
@@ -932,7 +1015,6 @@ body {
 .contact-form-title {
     color: white;
     margin-bottom: 15px;
-
 }
 
 .contact-form form {
@@ -963,8 +1045,6 @@ body {
     font-size: 1.1rem;
 }
 
-
-
 /* When input is focused and not empty */
 /* .contact-email:focus:not(:placeholder-shown) {
     border-color: green;
@@ -985,11 +1065,11 @@ body {
 
 .contact-email.valid {
     border-color: green;
-  }
+}
 
-  .contact-email.invalid {
+.contact-email.invalid {
     border-color: red;
-  }
+}
 
 #text-message {
     color: white;
@@ -1021,13 +1101,18 @@ body {
     cursor: not-allowed;
 }
 
+.contact-button.active {
+    cursor: default;
+}
+
+.contact-button.active:hover {
+    cursor: default;
+}
+
 .contact-button p,
 i {
     color: hsl(45, 100%, 65%);
 }
-
-
-
 
 /* Media Queries */
 @media screen and (max-width: 900px) {
