@@ -130,18 +130,23 @@ projectoptions.forEach(child => {
 let testimonialclosebtn = document.querySelector(".testimonial-hidden-close");
 let testimonialhidden = document.querySelector(".testimonial-hidden");
 let testimoniallist = document.querySelectorAll(".testimonial-list");
+let testimonialitems = document.querySelectorAll(".testimonial-item");
+let testimonialHiddenTitle = document.querySelector(".testimonial-hidden-right h1");
 
 
-testimoniallist.forEach(child => {
-  child.addEventListener("click", function () {
-    testimonialhidden.classList.add("show");
-    container.style.opacity = "0.3";
-    container.style.pointerevents = "none";
-    container.style.userselect = "none";
-    container.style.cursor = "default";
+testimoniallist.forEach(item => {
+  item.addEventListener("click", function () {
+    const clickedTitle = this.querySelector(".testimonial-item-title").textContent;
 
-
-
+    // Set the hidden section's title
+    if (testimonialHiddenTitle) {
+      testimonialHiddenTitle.textContent = clickedTitle;
+      testimonialhidden.classList.add("show");
+      container.style.opacity = "0.3";
+      container.style.pointerEvents = "none";
+      container.style.userSelect = "none";
+      container.style.cursor = "default";
+    }
   })
 })
 
@@ -153,4 +158,7 @@ testimoniallist.forEach(child => {
 testimonialclosebtn.addEventListener("click", function () {
   testimonialhidden.classList.remove("show");
   container.style.opacity = "1";
+  container.style.pointerEvents = "auto";
+  container.style.userSelect = "auto";
+  container.style.cursor = "auto";
 })
