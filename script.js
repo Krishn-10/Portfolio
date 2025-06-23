@@ -162,3 +162,38 @@ testimonialclosebtn.addEventListener("click", function () {
   container.style.userSelect = "auto";
   container.style.cursor = "auto";
 })
+
+
+//Photography-hidden
+let eyeButtons = document.querySelectorAll(".photos .eye");
+let photographyHidden = document.querySelector(".photography-hidden");
+let photographyHiddenImg = document.querySelector(".photography-hidden img");
+
+eyeButtons.forEach(eyeBtn => {
+  eyeBtn.addEventListener("click", function () {
+    // Get the clicked image's source
+    const clickedImage = this.closest('.photos').querySelector('img');
+    const imgSrc = clickedImage.src;
+
+    // Set the hidden section's image
+    photographyHiddenImg.src = imgSrc;
+
+    // Show the hidden section
+    photographyHidden.classList.add("active");
+
+    // Add overlay effect
+    container.style.opacity = "0.3";
+    container.style.pointerEvents = "none";
+    container.style.userSelect = "none";
+  });
+});
+
+// Add close functionality (clicking outside the image closes it)
+document.addEventListener("click", function (e) {
+  if (e.target.classList.contains("photography-hidden")) {
+    photographyHidden.classList.remove("active");
+    container.style.opacity = "1";
+    container.style.pointerEvents = "auto";
+    container.style.userSelect = "auto";
+  }
+});
